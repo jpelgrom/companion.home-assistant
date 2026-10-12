@@ -4,15 +4,16 @@ blueprint:
     Set the app lock settings for a device running the official Home Assistant
     companion app, using a notification command.
 
+
+
     For more information about the command, or how to add it as a step in your existing automation,
-    [review the documentation https://companion.home-assistant.io/docs/notifications/notification-commands#app-lock].
+    [review the documentation](https://companion.home-assistant.io/docs/notifications/notification-commands#app-lock).
   domain: automation
   source_url: https://github.com/home-assistant/companion.home-assistant/blob/master/static/assets/blueprints/notification_commands/command_app_lock.yaml
   author: Home Assistant
   homeassistant:
     min_version: 2024.6.0  # For input sections
   input:
-    trigger_section:
     trigger:
       name: When
       description: >
