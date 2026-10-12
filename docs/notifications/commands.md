@@ -5,6 +5,17 @@ id: "notification-commands"
 
 The Companion apps offer a lot of different notification options. In place of posting an actual notification on the device you can instead send a command as the `message` to trigger certain actions on your phone. Read below to find out what commands are supported on each platform.
 
+:::tip[Quick start: create an automation]{#blueprints-for-commands}
+
+To quickly get started using notification commands, each command has a [blueprint](https://www.home-assistant.io/docs/blueprint/) you can use. Import the blueprint to quickly create an automation. No need to manually copy code and review documentation, just choose your options.
+
+ 1. Find the notification command you want to use on this page.
+ 2. Click on the 'Import blueprint to My Home Assistant' button.
+ 3. Confirm you want to import the blueprint.
+ 4. Create a new automation, and choose the blueprint from the list.
+
+:::
+
 ![iOS](/assets/iOS.svg)
 
 | Command | Description |
@@ -115,9 +126,19 @@ In order to use the Intent Action `android.intent.action.CALL` you will also nee
 
 ## App lock
 
-![Android](/assets/android.svg) 
+![Android](/assets/android.svg)
 
-To take control of an Android companion app's security Users can alter the app lock settings using `message: command_app_lock`. All settings related to the app lock can be configured in a single command. The following settings are accessible through the notify command:
+To take control of an Android companion app's security, you can alter the app lock settings using `message: command_app_lock`. All settings related to the app lock can be configured in a single command.
+
+Import the following blueprint to [create an automation with this command](#blueprints-for-commands):
+
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fjpelgrom%2Fcompanion.home-assistant%2Fblob%2Fblueprints-in-docs%2Fstatic%2Fassets%2Fblueprints%2Fnotification_commands%2Fcommand_app_lock_automation.yaml)
+
+<details>
+
+<summary>Command syntax and settings</summary>
+
+The following settings are available through the notify command:
 
 | Parameter | Type | Description |
 |---------|---------|--------|
@@ -141,6 +162,8 @@ automation:
             app_lock_timeout: 60
             home_bypass_enabled: false
 ```
+
+</details>
 
 
 ## Auto Screen Brightness
